@@ -9,15 +9,20 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TestObserver {
+	
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("setUp");
+	}
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		System.out.println("setUpBeforeClass");
 	}
-
-	@Before
-	public void setUp() throws Exception {
-		System.out.println("setUp");
+	
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("tearDown");
 	}
 
 	@AfterClass
@@ -25,11 +30,7 @@ public class TestObserver {
 		System.out.println("tearDownAfterClass");
 	}
 
-
-	@After
-	public void tearDown() throws Exception {
-		System.out.println("tearDown");
-	}
+	/* TESTS */
 
 	@Test
 	public void test() {
